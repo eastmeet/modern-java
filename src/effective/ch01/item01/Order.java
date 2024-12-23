@@ -8,6 +8,8 @@ public class Order {
 
     private Product product;
 
+    private OrderStatus status;
+
     public static Order primeOrder(Product product) {
         Order order = new Order();
         order.prime = true;
@@ -20,6 +22,22 @@ public class Order {
         order.urgent = true;
         order.product = product;
         return order;
+    }
+
+    public boolean isPrime() {
+        return prime;
+    }
+
+    public boolean isUrgent() {
+        return urgent;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public OrderStatus getStatus() {
+        return status;
     }
 
 }
